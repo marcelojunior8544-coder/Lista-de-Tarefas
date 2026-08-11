@@ -1,2 +1,2 @@
 # Lista de Tarefas
-Lista de tarefas com uma API
+Lista de tarefas
