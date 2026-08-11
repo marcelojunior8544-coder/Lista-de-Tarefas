@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from lista import ToDoList
@@ -9,6 +10,7 @@ class TarefaItem(BaseModel):
 
 
 app = FastAPI(title='Lista de Tarefas API')
+app.mount('/', StaticFiles(directory='static', html=True), name='static')
 
 todo = ToDoList()
 
