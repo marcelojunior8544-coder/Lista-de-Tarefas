@@ -1,0 +1,24 @@
+body {
+    background-color:#aad1ee;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #308080;
+    box-shadow: 0 0 10px #0000001a
+}
+h1 {
+    text-align: center;
+    color: #0c0c0c;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+button {
+    background-color: #0f23d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}

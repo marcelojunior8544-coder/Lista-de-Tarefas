@@ -1,0 +1,1 @@
+cd "c:\Users\claud\OneDrive\Documentos\Meus Projetos\Lista de Tarefas" && python.exe -m uvicorn api:app --reload
