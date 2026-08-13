@@ -1,6 +1,2 @@
 fastapi
-<<<<<<< Updated upstream
 uvicorn[standard]
-=======
-uvicorn[standard]
->>>>>>> Stashed changes
