@@ -32,10 +32,6 @@ def deletar_tarefa(numero: int):
         return todo.remover_tarefa(numero)
     except IndexError as error:
         raise HTTPException(status_code=404, detail=str(error))
-<<<<<<< Updated upstream
-=======
 
 
 app.mount('/', StaticFiles(directory='static', html=True), name='static')
-
->>>>>>> Stashed changes
