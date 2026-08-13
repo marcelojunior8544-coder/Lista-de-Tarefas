@@ -1,6 +1,7 @@
-﻿class ToDoList:
+﻿import arquivar as arq
+class ToDoList:
     def __init__(self):
-        self.tarefas = []
+        self.tarefas = arq.carregar_tarefas()
 
     @staticmethod
     def menu():
@@ -17,6 +18,7 @@
             raise ValueError('A tarefa não pode ficar sem nome!')
 
         self.tarefas.append(tarefa)
+        arq.arquivar_tarefas(self.tarefas)
         return tarefa
 
     def adicionar_tarefa_cli(self):
@@ -49,7 +51,9 @@
         if not 1 <= numero <= len(self.tarefas):
             raise IndexError('Número inválido. Tente novamente.')
 
-        return self.tarefas.pop(numero - 1)
+        tarefa_removida = self.tarefas.pop(numero - 1)
+        arq.arquivar_tarefas(self.tarefas)
+        return tarefa_removida
 
     def remover_tarefa_cli(self):
         if not self.tarefas:
