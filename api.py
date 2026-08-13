@@ -10,8 +10,6 @@ class TarefaItem(BaseModel):
 
 
 app = FastAPI(title='Lista de Tarefas API')
-app.mount('/', StaticFiles(directory='static', html=True), name='static')
-
 todo = ToDoList()
 
 
@@ -34,3 +32,10 @@ def deletar_tarefa(numero: int):
         return todo.remover_tarefa(numero)
     except IndexError as error:
         raise HTTPException(status_code=404, detail=str(error))
+<<<<<<< Updated upstream
+=======
+
+
+app.mount('/', StaticFiles(directory='static', html=True), name='static')
+
+>>>>>>> Stashed changes
